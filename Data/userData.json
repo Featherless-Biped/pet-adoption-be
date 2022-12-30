@@ -1,0 +1,82 @@
+[
+    {
+        "firstName": "Ardath",
+        "lastName": "Sigg",
+        "email": "asigg0@amazonaws.com",
+        "phoneNumber": "872-101-2596",
+        "administrator": false,
+        "passwrod": "QETfG7"
+    },
+    {
+        "firstName": "Tobit",
+        "lastName": "Gabala",
+        "email": "tgabala1@domainmarket.com",
+        "phoneNumber": "811-341-7965",
+        "administrator": true,
+        "passwrod": "0dO9k8ihh2Mm"
+    },
+    {
+        "firstName": "Marie-jeanne",
+        "lastName": "Whife",
+        "email": "mwhife2@jiathis.com",
+        "phoneNumber": "425-541-0914",
+        "administrator": false,
+        "passwrod": "4VyPA3Q9Fy1b"
+    },
+    {
+        "firstName": "Orelee",
+        "lastName": "Beeze",
+        "email": "obeeze3@independent.co.uk",
+        "phoneNumber": "696-673-6942",
+        "administrator": true,
+        "passwrod": "XhwcofkL1"
+    },
+    {
+        "firstName": "Etta",
+        "lastName": "Boote",
+        "email": "eboote4@ibm.com",
+        "phoneNumber": "722-438-0599",
+        "administrator": false,
+        "passwrod": "9zbSuXk"
+    },
+    {
+        "firstName": "Malorie",
+        "lastName": "Polle",
+        "email": "mpolle5@wiley.com",
+        "phoneNumber": "594-204-6891",
+        "administrator": false,
+        "passwrod": "sbzflYEjo"
+    },
+    {
+        "firstName": "Phyllys",
+        "lastName": "Caplin",
+        "email": "pcaplin6@liveinternet.ru",
+        "phoneNumber": "290-204-6245",
+        "administrator": false,
+        "passwrod": "vp9o8fR1nbAv"
+    },
+    {
+        "firstName": "Lorita",
+        "lastName": "Matschek",
+        "email": "lmatschek7@usda.gov",
+        "phoneNumber": "990-766-2555",
+        "administrator": true,
+        "passwrod": "PSnECc"
+    },
+    {
+        "firstName": "Giraud",
+        "lastName": "Shurey",
+        "email": "gshurey8@prweb.com",
+        "phoneNumber": "186-653-4589",
+        "administrator": false,
+        "passwrod": "sAPlhD"
+    },
+    {
+        "firstName": "Marchall",
+        "lastName": "Babonau",
+        "email": "mbabonau9@senate.gov",
+        "phoneNumber": "849-340-8024",
+        "administrator": true,
+        "passwrod": "hxT2gVbr8SSt"
+    }
+]
