@@ -12,9 +12,7 @@ export const register = async (req, res) => {
             email,
             password,
             picturePath,
-            ownedPets,
             phoneNumber,
-            administrator,
             shortBio,
         } = req.body;
         const salt = await bcrypt.genSalt();
@@ -24,11 +22,9 @@ export const register = async (req, res) => {
             firstName,
             lastName,
             email,
-            passwordHash,
+            password: passwordHash,
             picturePath,
-            ownedPets,
             phoneNumber,
-            administrator,
             shortBio,
         });
         const savedUser = await newUser.save();
@@ -46,7 +42,8 @@ export const login = async (req, res) => {
         const user = await User.findOne({ email: email });
         if (!user) return res.status(400).json({ msg: "User does not exist." });
 
-        const isMatch = await bcrypt.compare(password, user.password);
+        console.log("here")
+        const isMatch = bcrypt.compare(password, user.password);
         if (!isMatch)
             return res.status(400).json({ msg: "Invalid credentials." });
 

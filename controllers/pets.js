@@ -5,37 +5,37 @@ import User from "../models/User.js";
 export const placePetForAdoption = async (req, res) => {
     try {
         const {
-            userID,
             petName,
             type,
+            breed,
             adoptionStatus,
             picturePath,
             height,
             weight,
             color,
-            bio,
+            shortBio,
             hypoallergenic,
             dietaryRestriction,
-            breed,
+            
         } = req.body;
-        const user = await User.findById(userID);
+        
         const newPet = new Pet({
-            userID,
+            
             petName,
             type,
+            breed,
             adoptionStatus,
             picturePath,
             height,
             weight,
             color,
-            bio,
+            shortBio,
             hypoallergenic,
             dietaryRestriction,
-            breed,
+            
         });
-        await newPet.save();
-        const pet = await Pet.find();
-        res.status(201).json(pet);
+        const savedPet = await newPet.save();
+        res.status(201).json(savedPet);
     } catch (err) {
         res.status(409).json({ message: err.message });
     }

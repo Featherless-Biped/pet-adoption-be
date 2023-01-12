@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const PetSchema = new mongoose.Schema(
     {
-        name: {
+        petName: {
             type: String,
             required: true,
             min: 2,
@@ -19,19 +19,20 @@ const PetSchema = new mongoose.Schema(
             default: "",
         },
         adoptionStatus: {
-            type: String,
+            type: Boolean,
+            default: false,
             required: true,
         },
         height: {
-            type: Number,
+            type: String,
         },
         weight: {
-            type: Number,
+            type: String,
         },
         color: {
             type: String,
         },
-        bio: {
+        shortBio: {
             type: String,
             default: "",
         },
@@ -41,8 +42,8 @@ const PetSchema = new mongoose.Schema(
             required: true,
         },
         dietaryRestriction: {
-            type: Array,
-            default: [],
+            type: String,
+            default: "None",
         },
         breed: {
             type: String,
