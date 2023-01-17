@@ -8,7 +8,7 @@ const router = express.Router()
 
 // READ
 router.get("/:id", verifyToken, getUser);
-router.get("/:id/pets", verifyToken, getUserPets)
+router.get("/:id/ownedPets", verifyToken, getUser)
 
 // Update
 router.patch("/:id/:petID", verifyToken, addRemovePets)

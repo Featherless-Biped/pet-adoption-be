@@ -14,41 +14,41 @@ export const getUser = async (req, res) => {
 
 export const getUserPets = async (req, res) => {
     try {
-        const { id } = req.params;
-        const user = await User.findById(id);
-        const pets = await Promise.all(user.pets.map((id) => Pet.findById(id)));
-        const formattedPets = pets.map(
-            ({
-                _id,
-                petName,
-                type,
-                adoptionStatus,
-                picturePath,
-                height,
-                weight,
-                color,
-                bio,
-                hypoallergenic,
-                dietaryRestriction,
-                breed,
-            }) => {
-                return {
-                    _id,
-                    petName,
-                    type,
-                    adoptionStatus,
-                    picturePath,
-                    height,
-                    weight,
-                    color,
-                    bio,
-                    hypoallergenic,
-                    dietaryRestriction,
-                    breed,
-                };
-            }
-        );
-        res.status(200).json(formattedPets)
+        // const { id } = req.params;
+        // const user = await User.findById(id);
+        // const pets = await Promise.all(user.pets.map((id) => Pet.findById(id)));
+        // const formattedPets = pets.map(
+        //     ({
+        //         _id,
+        //         petName,
+        //         type,
+        //         adoptionStatus,
+        //         picturePath,
+        //         height,
+        //         weight,
+        //         color,
+        //         bio,
+        //         hypoallergenic,
+        //         dietaryRestriction,
+        //         breed,
+        //     }) => {
+        //         return {
+        //             _id,
+        //             petName,
+        //             type,
+        //             adoptionStatus,
+        //             picturePath,
+        //             height,
+        //             weight,
+        //             color,
+        //             bio,
+        //             hypoallergenic,
+        //             dietaryRestriction,
+        //             breed,
+        //         };
+        //     }
+        // );
+        // res.status(200).json(formattedPets)
     } catch (err) {
         res.status(404).json({ message: err.message });
     }

@@ -41,16 +41,26 @@ export const placePetForAdoption = async (req, res) => {
     }
 };
 
-// READ (GET PETS UP FOR ADOPTION)
+// READ (GET ALL PETS UP FOR ADOPTION)
 export const getAvailablePets = async (req, res) => {
     try {
-        const pet = await Pet.find();
-        res.status(200).json(pet);
+        const pets = await Pet.find();
+        res.status(200).json(pets);
     } catch (err) {
         res.status(404).json({ message: err.message });
     }
 };
 
+// READ (GET Specific PET)
+export const getSpecificPet = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const pet = await Pet.findById(id);
+        res.status(200).json(pet);
+    } catch (err) {
+        res.status(404).json({ message: err.message });
+    }
+};
 
 // UPDATE ADOPT/ABANDON (Sorry for the wording) PET
 

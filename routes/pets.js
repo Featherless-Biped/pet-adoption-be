@@ -1,11 +1,12 @@
 import  express  from "express";
-import { getAvailablePets, adoptPet} from "../controllers/pets.js"
+import { getAvailablePets, adoptPet, getSpecificPet} from "../controllers/pets.js"
 import { verifyToken } from "../middleware/auth.js";
 
 const router = express.Router()
 
 // READ
-router.get("/", verifyToken, getAvailablePets)
+router.get("/",  getAvailablePets)
+router.get("/:id",  getSpecificPet)
 
 //  CREATE PET
 // router.patch("/", placePetForAdoption)
