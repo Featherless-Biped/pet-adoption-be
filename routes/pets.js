@@ -12,7 +12,7 @@ router.get("/:id",  getSpecificPet)
 // router.patch("/", placePetForAdoption)
 
 // UPDATE
-router.patch("/:petId/adoption", verifyToken, adoptPet)
+router.patch("/:petId/adoptionStatus", verifyToken, adoptPet)
 
 
 export default router
